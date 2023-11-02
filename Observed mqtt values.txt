@@ -1,0 +1,164 @@
+WiFi signal strength is:
+-58.00
+Reading the MODBUS...
+MODBUS read failed[1]. value: 224 Topic: System_Status
+Posting 117.40 to MQTT topic home/solar/growatt-spf/PV_Voltage
+Posting 1247.00 to MQTT topic home/solar/growatt-spf/PV_Power
+Posting 23.10 to MQTT topic home/solar/growatt-spf/Buck_Converter_Current
+Posting 236.00 to MQTT topic home/solar/growatt-spf/Output_Watts
+Posting 255.00 to MQTT topic home/solar/growatt-spf/Output_VA
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_VA
+Posting 52.40 to MQTT topic home/solar/growatt-spf/Battery_Voltage
+Posting 100.00 to MQTT topic home/solar/growatt-spf/Battery_SOC
+Posting 409.50 to MQTT topic home/solar/growatt-spf/Bus_Voltage
+Posting 219.10 to MQTT topic home/solar/growatt-spf/AC_Input_Voltage
+Posting 59.96 to MQTT topic home/solar/growatt-spf/AC_Input_Frequency
+Posting 220.00 to MQTT topic home/solar/growatt-spf/AC_Output_Voltage
+Posting 59.96 to MQTT topic home/solar/growatt-spf/AC_Output_Frequency
+Posting 40.80 to MQTT topic home/solar/growatt-spf/Inverter_Temperature
+Posting 34.50 to MQTT topic home/solar/growatt-spf/DC_to_DC_Converter_Temperature
+Posting 8.00 to MQTT topic home/solar/growatt-spf/Load_Percentage
+MODBUS read failed[1]. value: 224 Topic: Buck_Converter_Temperature
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Output_Current
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Inverter_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_VA
+Posting 8.00 to MQTT topic home/solar/growatt-spf/PV_Energy_Today
+Posting 1677697.25 to MQTT topic home/solar/growatt-spf/PV_Energy_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Today
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Total
+Posting 6.60 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Today
+Posting 4382.20 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Battery_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_VA
+Posting 257.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Watts
+Posting 255.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_VA
+Posting -769.00 to MQTT topic home/solar/growatt-spf/Battery_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/Inverter_Fan_Speed
+MODBUS read failed[1]. value: 226 Topic: MPPT_Fan_Speed
+Reading Completed
+WiFi signal strength is:
+-58.00
+Reading the MODBUS...
+MODBUS read failed[2]. value: 224 Topic: System_Status
+Posting 115.00 to MQTT topic home/solar/growatt-spf/PV_Voltage
+Posting 1381.00 to MQTT topic home/solar/growatt-spf/PV_Power
+Posting 24.70 to MQTT topic home/solar/growatt-spf/Buck_Converter_Current
+Posting 241.00 to MQTT topic home/solar/growatt-spf/Output_Watts
+Posting 254.00 to MQTT topic home/solar/growatt-spf/Output_VA
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_VA
+Posting 52.35 to MQTT topic home/solar/growatt-spf/Battery_Voltage
+Posting 100.00 to MQTT topic home/solar/growatt-spf/Battery_SOC
+Posting 409.00 to MQTT topic home/solar/growatt-spf/Bus_Voltage
+Posting 215.70 to MQTT topic home/solar/growatt-spf/AC_Input_Voltage
+Posting 59.95 to MQTT topic home/solar/growatt-spf/AC_Input_Frequency
+Posting 219.80 to MQTT topic home/solar/growatt-spf/AC_Output_Voltage
+Posting 59.99 to MQTT topic home/solar/growatt-spf/AC_Output_Frequency
+Posting 40.80 to MQTT topic home/solar/growatt-spf/Inverter_Temperature
+Posting 34.50 to MQTT topic home/solar/growatt-spf/DC_to_DC_Converter_Temperature
+Posting 8.50 to MQTT topic home/solar/growatt-spf/Load_Percentage
+MODBUS read failed[1]. value: 224 Topic: Buck_Converter_Temperature
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Output_Current
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Inverter_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_VA
+Posting 8.00 to MQTT topic home/solar/growatt-spf/PV_Energy_Today
+Posting 1677697.25 to MQTT topic home/solar/growatt-spf/PV_Energy_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Today
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Total
+Posting 6.60 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Today
+Posting 4382.20 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Battery_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_VA
+Posting 275.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Watts
+Posting 255.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_VA
+Posting -782.00 to MQTT topic home/solar/growatt-spf/Battery_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/Inverter_Fan_Speed
+MODBUS read failed[1]. value: 224 Topic: MPPT_Fan_Speed
+Reading Completed
+WiFi signal strength is:
+-58.00
+Reading the MODBUS...
+MODBUS read failed[2]. value: 225 Topic: System_Status
+Posting 116.00 to MQTT topic home/solar/growatt-spf/PV_Voltage
+Posting 1310.00 to MQTT topic home/solar/growatt-spf/PV_Power
+Posting 24.00 to MQTT topic home/solar/growatt-spf/Buck_Converter_Current
+Posting 232.00 to MQTT topic home/solar/growatt-spf/Output_Watts
+Posting 255.00 to MQTT topic home/solar/growatt-spf/Output_VA
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_VA
+Posting 52.75 to MQTT topic home/solar/growatt-spf/Battery_Voltage
+Posting 100.00 to MQTT topic home/solar/growatt-spf/Battery_SOC
+Posting 413.90 to MQTT topic home/solar/growatt-spf/Bus_Voltage
+Posting 216.20 to MQTT topic home/solar/growatt-spf/AC_Input_Voltage
+Posting 59.97 to MQTT topic home/solar/growatt-spf/AC_Input_Frequency
+Posting 220.00 to MQTT topic home/solar/growatt-spf/AC_Output_Voltage
+Posting 59.95 to MQTT topic home/solar/growatt-spf/AC_Output_Frequency
+Posting 40.80 to MQTT topic home/solar/growatt-spf/Inverter_Temperature
+Posting 34.50 to MQTT topic home/solar/growatt-spf/DC_to_DC_Converter_Temperature
+Posting 8.00 to MQTT topic home/solar/growatt-spf/Load_Percentage
+MODBUS read failed[1]. value: 224 Topic: Buck_Converter_Temperature
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Output_Current
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Inverter_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_VA
+Posting 8.00 to MQTT topic home/solar/growatt-spf/PV_Energy_Today
+Posting 1677697.25 to MQTT topic home/solar/growatt-spf/PV_Energy_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Today
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Total
+Posting 6.60 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Today
+Posting 4382.20 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Battery_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_VA
+Posting 258.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Watts
+Posting 242.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_VA
+Posting -1084.00 to MQTT topic home/solar/growatt-spf/Battery_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/Inverter_Fan_Speed
+MODBUS read failed[1]. value: 224 Topic: MPPT_Fan_Speed
+Reading Completed
+WiFi signal strength is:
+-57.00
+Reading the MODBUS...
+Posting 5.00 to MQTT topic home/solar/growatt-spf/System_Status
+Posting 108.30 to MQTT topic home/solar/growatt-spf/PV_Voltage
+MODBUS read failed[1]. value: 224 Topic: PV_Power
+Posting 21.30 to MQTT topic home/solar/growatt-spf/Buck_Converter_Current
+Posting 227.00 to MQTT topic home/solar/growatt-spf/Output_Watts
+Posting 255.00 to MQTT topic home/solar/growatt-spf/Output_VA
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_VA
+Posting 52.25 to MQTT topic home/solar/growatt-spf/Battery_Voltage
+Posting 100.00 to MQTT topic home/solar/growatt-spf/Battery_SOC
+Posting 408.80 to MQTT topic home/solar/growatt-spf/Bus_Voltage
+Posting 219.10 to MQTT topic home/solar/growatt-spf/AC_Input_Voltage
+Posting 59.92 to MQTT topic home/solar/growatt-spf/AC_Input_Frequency
+Posting 220.00 to MQTT topic home/solar/growatt-spf/AC_Output_Voltage
+Posting 59.95 to MQTT topic home/solar/growatt-spf/AC_Output_Frequency
+Posting 40.90 to MQTT topic home/solar/growatt-spf/Inverter_Temperature
+Posting 34.60 to MQTT topic home/solar/growatt-spf/DC_to_DC_Converter_Temperature
+Posting 8.00 to MQTT topic home/solar/growatt-spf/Load_Percentage
+Posting 63.90 to MQTT topic home/solar/growatt-spf/Buck_Converter_Temperature
+Posting 1.10 to MQTT topic home/solar/growatt-spf/Output_Current
+MODBUS read failed[1]. value: 224 Topic: Inverter_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Input_VA
+Posting 8.00 to MQTT topic home/solar/growatt-spf/PV_Energy_Today
+Posting 1677697.25 to MQTT topic home/solar/growatt-spf/PV_Energy_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Today
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Total
+Posting 6.60 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Today
+Posting 4382.20 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Total
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Charger_Battery_Current
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/AC_Discharge_VA
+Posting 250.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_Watts
+Posting 242.00 to MQTT topic home/solar/growatt-spf/Battery_Discharge_VA
+Posting -822.00 to MQTT topic home/solar/growatt-spf/Battery_Watts
+Ignoring 0.0 to MQTT topic home/solar/growatt-spf/Inverter_Fan_Speed
+Posting 195.00 to MQTT topic home/solar/growatt-spf/MPPT_Fan_Speed
+Reading Completed
