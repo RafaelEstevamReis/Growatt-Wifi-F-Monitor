@@ -1,0 +1,51 @@
+type: entities
+entities:
+  - sensor.growatt_ac_charger_battery_current
+  - sensor.growatt_ac_charger_today
+  - sensor.growatt_ac_charger_total
+  - sensor.growatt_ac_charger_va
+  - sensor.growatt_ac_charger_watts
+  - sensor.growatt_ac_discharge_va
+  - sensor.growatt_ac_discharge_watts
+  - sensor.growatt_ac_input_frequency
+  - sensor.growatt_ac_input_va
+  - sensor.growatt_ac_input_voltage
+  - sensor.growatt_ac_input_watts
+  - sensor.growatt_ac_output_frequency
+  - sensor.growatt_ac_output_voltage
+
+type: entities
+entities:
+  - sensor.growatt_battery_discharge_today
+  - sensor.growatt_battery_discharge_total
+  - sensor.growatt_battery_discharge_va
+  - sensor.growatt_battery_discharge_watts
+  - sensor.growatt_battery_soc
+  - sensor.growatt_battery_watts
+  - sensor.growatt_battery_voltage
+
+type: entities
+entities:
+  - sensor.growatt_load_percentage
+  - sensor.growatt_system_status
+  - sensor.growatt_bus_voltage
+  - sensor.growatt_dc_to_dc_converter_temperature
+  - sensor.growatt_mppt_fan_speed
+  - sensor.growatt_buck_converter_current
+  - sensor.growatt_buck_converter_temperature
+  - sensor.growatt_inverter_current
+  - sensor.growatt_inverter_fan_speed
+  - sensor.growatt_inverter_temperature
+
+type: entities
+entities:
+  - sensor.growatt_output_current
+  - sensor.growatt_output_va
+  - sensor.growatt_output_watts
+
+type: entities
+entities:
+  - sensor.growatt_pv_energy_today
+  - sensor.growatt_pv_energy_total
+  - sensor.growatt_pv_power
+  - sensor.growatt_pv_voltage
