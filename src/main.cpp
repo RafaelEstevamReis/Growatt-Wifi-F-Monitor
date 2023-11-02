@@ -1,5 +1,5 @@
 //Choose which protocol you'd like to post the statistics to your database by uncommenting one (or more) of the definitions below.
-#define INFLUX_UDP
+//#define INFLUX_UDP
 //#define INFLUX_HTTP
 #define MQTT
 
@@ -181,7 +181,6 @@ void setup()
 
   // Port defaults to 8266
   ArduinoOTA.setPort(8266);
-
   // Hostname defaults to esp8266-[MAC]
   ArduinoOTA.setHostname("esp8266-Growatt-monitor");
 
@@ -281,7 +280,13 @@ void readMODBUS() {
   Serial.flush(); //Make sure the hardware serial buffer is empty before communicating over MODBUS.
   
   for (int i = 0; i < 37; i++) {  //Iterate through each of the MODBUS queries and obtain their values.
-    ArduinoOTA.handle();
+    // Wait more between requests
+    for(int w=0; w<10;w++){
+      delay(50);
+      yield(); // handle wifi tasks
+      ArduinoOTA.handle();
+    }
+
     Growatt.clearResponseBuffer();
     MODBUSresult = Growatt.readInputRegisters(arrstats[i].address, 2); //Query each of the MODBUS registers.
     if (MODBUSresult == Growatt.ku8MBSuccess) {
@@ -305,10 +310,10 @@ void readMODBUS() {
           arrstats[i].value = 0;
         }
       }
-
+#ifndef MQTT
       TelnetStream.print(arrstats[i].name); TelnetStream.print(": "); TelnetStream.println(arrstats[i].value);
+#endif
       arrstats[i].average.addValue(arrstats[i].value); //Add the value to the running average.
-      //TelnetStream.print("Values collected: "); TelnetStream.println(arrstats[i].average.getCount());
 
       if (arrstats[i].average.getCount() >= avSamples) { //If we have enough samples added to the running average, send the data to InfluxDB and clear the average.
         char realtimeAvString[8];
@@ -327,6 +332,12 @@ void readMODBUS() {
         sprintf(MQTTtopic, "%s/%s", MQTTtopicPrefix, arrstats[i].name);
         if (MQTTclient.connect(MQTTclientId, SECRET_MQTT_USER, SECRET_MQTT_PASS)) {
           char statString[8];
+
+          if(arrstats[i].value == 0) {            
+            TelnetStream.printf("Ignoring 0.0 to MQTT topic %s \r\n", MQTTtopic);
+            continue;
+          }
+
           dtostrf(arrstats[i].value, 1, 2, statString);
           TelnetStream.printf("Posting %s to MQTT topic %s \r\n", statString, MQTTtopic);
           MQTTclient.publish(MQTTtopic, statString, (bool)1);
@@ -342,11 +353,16 @@ void readMODBUS() {
 
     }
     else {
-      TelnetStream.print("MODBUS read failed. Returned value: "); TelnetStream.println(MODBUSresult);
+      // Better debug
       failures++;
-      TelnetStream.print("Failure counter: "); TelnetStream.println(failures);
+      TelnetStream.print("MODBUS read failed["); 
+      TelnetStream.print(failures);
+      TelnetStream.print("]. value: "); 
+      TelnetStream.print(MODBUSresult);
+      TelnetStream.print(" Topic: "); 
+      TelnetStream.println(arrstats[i].name);
     }
-    yield();
+    yield(); // handle wifi tasks
   }
 }
 
@@ -364,11 +380,13 @@ void loop()
     delay(1000);
   }
 
-  if ((unsigned long)(millis() - lastUpdate) >= 5000) { //Get a MODBUS reading every 5 seconds.
+  if ((unsigned long)(millis() - lastUpdate) >= 30*1000) { //Get a MODBUS reading every 30 seconds.
     float rssi = WiFi.RSSI();
     TelnetStream.println("WiFi signal strength is: "); TelnetStream.println(rssi);
     TelnetStream.println("Reading the MODBUS...");
     readMODBUS();
+    
+    TelnetStream.println("Reading Completed");
     lastUpdate = millis();
 
     #ifdef MQTT
