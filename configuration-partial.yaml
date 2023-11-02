@@ -1,0 +1,257 @@
+mqtt:
+  sensor:
+#== Growatt Inverter ==#
+# Global/Geral
+    - name: "growatt_System_Status"
+      state_topic: "home/solar/growatt-spf/System_Status"
+      value_template: "{{ value }}"
+
+    - name: "growatt_Load_Percentage"
+      state_topic: "home/solar/growatt-spf/Load_Percentage"
+      unit_of_measurement: "%"
+      device_class: power_factor
+      state_class: measurement
+      value_template: "{{ value }}"
+
+# Internal
+## Internal - Inverter
+    - name: "growatt_Inverter_Temperature"
+      state_topic: "home/solar/growatt-spf/Inverter_Temperature"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_Inverter_Fan_Speed"
+      state_topic: "home/solar/growatt-spf/Inverter_Fan_Speed"
+      unit_of_measurement: "%"
+      device_class: humidity
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_Inverter_Current"
+      state_topic: "home/solar/growatt-spf/Inverter_Current"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+      value_template: "{{ value }}"
+## Internal - Buck
+    - name: "growatt_Buck_Converter_Current"
+      state_topic: "home/solar/growatt-spf/Buck_Converter_Current"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_Buck_Converter_Temperature"
+      state_topic: "home/solar/growatt-spf/Buck_Converter_Temperature"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_DC_to_DC_Converter_Temperature"
+      state_topic: "home/solar/growatt-spf/DC_to_DC_Converter_Temperature"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_Bus_Voltage"
+      state_topic: "home/solar/growatt-spf/Bus_Voltage"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_MPPT_Fan_Speed"
+      state_topic: "home/solar/growatt-spf/MPPT_Fan_Speed"
+      unit_of_measurement: "rpm"
+      device_class: speed
+      state_class: measurement
+      value_template: "{{ value }}"
+
+# AC
+## AC - Input
+    - name: "growatt_AC_Input_VA"
+      state_topic: "home/solar/growatt-spf/AC_Input_VA"
+      unit_of_measurement: "VA"
+      device_class: apparent_power
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_AC_Input_Watts"
+      state_topic: "home/solar/growatt-spf/AC_Input_Watts"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_AC_Input_Voltage"
+      state_topic: "home/solar/growatt-spf/AC_Input_Voltage"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_AC_Input_Frequency"
+      state_topic: "home/solar/growatt-spf/AC_Input_Frequency"
+      unit_of_measurement: "Hz"
+      device_class: frequency
+      state_class: measurement
+      value_template: "{{ value }}"
+
+## AC - Charger
+    - name: "growatt_AC_Charger_Battery_Current"
+      state_topic: "home/solar/growatt-spf/AC_Charger_Battery_Current"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_AC_Charger_VA"
+      state_topic: "home/solar/growatt-spf/AC_Charger_VA"
+      unit_of_measurement: "VA"
+      device_class: apparent_power
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_AC_Charger_Watts"
+      state_topic: "home/solar/growatt-spf/AC_Charger_Watts"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_AC_Charger_Today"
+      state_topic: "home/solar/growatt-spf/AC_Charger_Today"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total_increasing
+      value_template: "{{ value }}"
+    - name: "growatt_AC_Charger_Total"
+      state_topic: "home/solar/growatt-spf/AC_Charger_Total"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total
+      value_template: "{{ value }}"
+## AC - Discharge
+    - name: "growatt_AC_Discharge_VA"
+      state_topic: "home/solar/growatt-spf/AC_Discharge_VA"
+      unit_of_measurement: "VA"
+      device_class: apparent_power
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_AC_Discharge_Watts"
+      state_topic: "home/solar/growatt-spf/AC_Discharge_Watts"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+## AC - Output
+    - name: "growatt_AC_Output_Voltage"
+      state_topic: "home/solar/growatt-spf/AC_Output_Voltage"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_AC_Output_Frequency"
+      state_topic: "home/solar/growatt-spf/AC_Output_Frequency"
+      unit_of_measurement: "Hz"
+      device_class: frequency
+      state_class: measurement
+      value_template: "{{ value }}"
+
+
+# Battery
+    - name: "growatt_Battery_voltage"
+      state_topic: "home/solar/growatt-spf/Battery_Voltage"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_Battery_SOC"
+      state_topic: "home/solar/growatt-spf/Battery_SOC"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_Battery_Discharge_VA"
+      state_topic: "home/solar/growatt-spf/Battery_Discharge_VA"
+      unit_of_measurement: "VA"
+      device_class: apparent_power
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_Battery_Discharge_Watts"
+      state_topic: "home/solar/growatt-spf/Battery_Discharge_Watts"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_Battery_Watts"
+      state_topic: "home/solar/growatt-spf/Battery_Watts"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_Battery_Discharge_Today"
+      state_topic: "home/solar/growatt-spf/Battery_Discharge_Today"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total_increasing
+      value_template: "{{ value }}"
+    - name: "growatt_Battery_Discharge_Total"
+      state_topic: "home/solar/growatt-spf/Battery_Discharge_Total"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total_increasing
+      value_template: "{{ value }}"
+
+# PV
+
+    - name: "growatt_PV_Voltage"
+      state_topic: "home/solar/growatt-spf/PV_Voltage"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_PV_Power"
+      state_topic: "home/solar/growatt-spf/PV_Power"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_PV_Energy_Today"
+      state_topic: "home/solar/growatt-spf/PV_Energy_Today"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total_increasing
+      value_template: "{{ value }}"
+    - name: "growatt_PV_Energy_Total"
+      state_topic: "home/solar/growatt-spf/PV_Energy_Total"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: total_increasing
+      value_template: "{{ value }}"
+
+# Output
+    - name: "growatt_Output_Current"
+      state_topic: "home/solar/growatt-spf/Output_Current"
+      unit_of_measurement: "A"
+      device_class: current
+      state_class: measurement
+      value_template: "{{ value }}"
+
+    - name: "growatt_Output_Watts"
+      state_topic: "home/solar/growatt-spf/Output_Watts"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      value_template: "{{ value }}"
+    - name: "growatt_Output_VA"
+      state_topic: "home/solar/growatt-spf/Output_VA"
+      unit_of_measurement: "VA"
+      device_class: apparent_power
+      state_class: measurement
+      value_template: "{{ value }}"
+#== Growatt Inverter ==#
