@@ -1,3 +1,5 @@
+This is a Fork of [Octal-ip's project](https://github.com/octal-ip/ESP07_Growatt_SPF_3500-5000_ES_Monitor) focused in Home Assistant
+
 # ESP07_Growatt_SPF_3500-5000_ES_Monitor
 This project provides PlatformIO code for building custom firmware for the WiFi-F module included with the Growatt SPF 3500-5000 ES off-grid inverters. It collects all available metrics through the MODBUS interface and sends them to InfluxDB or MQTT. The inverter's AC output can also be placed in and out of standby mode remotely through MQTT to reduce idle power consumption when the AC output isn't needed. This is a function not available through the inverter's interface and can save quite a lot of energy over time.
 
