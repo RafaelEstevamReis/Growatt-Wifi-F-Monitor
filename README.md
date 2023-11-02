@@ -1,7 +1,10 @@
+# Growatt WiFi-F DataLogger firmware
+
 This is a Fork of [Octal-ip's project](https://github.com/octal-ip/ESP07_Growatt_SPF_3500-5000_ES_Monitor) focused in Home Assistant
 
-# My take on the project
+## My take on the project
 
+I had some issues using this with home assitant, so I decided to diferentiate the fork to make it easier for home assistant users
 
 # Original Octal readme
 ## ESP07_Growatt_SPF_3500-5000_ES_Monitor
