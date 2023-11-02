@@ -1,51 +1,133 @@
-type: entities
-entities:
-  - sensor.growatt_ac_charger_battery_current
-  - sensor.growatt_ac_charger_today
-  - sensor.growatt_ac_charger_total
-  - sensor.growatt_ac_charger_va
-  - sensor.growatt_ac_charger_watts
-  - sensor.growatt_ac_discharge_va
-  - sensor.growatt_ac_discharge_watts
-  - sensor.growatt_ac_input_frequency
-  - sensor.growatt_ac_input_va
-  - sensor.growatt_ac_input_voltage
-  - sensor.growatt_ac_input_watts
-  - sensor.growatt_ac_output_frequency
-  - sensor.growatt_ac_output_voltage
-
-type: entities
-entities:
-  - sensor.growatt_battery_discharge_today
-  - sensor.growatt_battery_discharge_total
-  - sensor.growatt_battery_discharge_va
-  - sensor.growatt_battery_discharge_watts
-  - sensor.growatt_battery_soc
-  - sensor.growatt_battery_watts
-  - sensor.growatt_battery_voltage
-
-type: entities
-entities:
-  - sensor.growatt_load_percentage
-  - sensor.growatt_system_status
-  - sensor.growatt_bus_voltage
-  - sensor.growatt_dc_to_dc_converter_temperature
-  - sensor.growatt_mppt_fan_speed
-  - sensor.growatt_buck_converter_current
-  - sensor.growatt_buck_converter_temperature
-  - sensor.growatt_inverter_current
-  - sensor.growatt_inverter_fan_speed
-  - sensor.growatt_inverter_temperature
-
-type: entities
-entities:
-  - sensor.growatt_output_current
-  - sensor.growatt_output_va
-  - sensor.growatt_output_watts
-
-type: entities
-entities:
-  - sensor.growatt_pv_energy_today
-  - sensor.growatt_pv_energy_total
-  - sensor.growatt_pv_power
-  - sensor.growatt_pv_voltage
+- title: Growatt
+  path: growatt
+  badges: []
+  cards:  
+    - type: entities
+      entities:
+        - entity: sensor.growatt_load_percentage
+          secondary_info: last-updated
+          name: Load Percentage
+        - entity: sensor.growatt_system_status
+          secondary_info: last-updated
+          name: System Status
+        - entity: sensor.growatt_bus_voltage
+          secondary_info: last-updated
+          name: Bus Voltage
+        - entity: sensor.growatt_dc_to_dc_converter_temperature
+          secondary_info: last-updated
+          name: DC-DC Temp
+        - entity: sensor.growatt_mppt_fan_speed
+          secondary_info: last-updated
+          name: MPPT Fan
+        - entity: sensor.growatt_buck_converter_current
+          secondary_info: last-updated
+          name: Buck Converter Current
+        - entity: sensor.growatt_buck_converter_temperature
+          secondary_info: last-updated
+          name: Buck Converter Temp
+        - entity: sensor.growatt_inverter_current
+          secondary_info: last-updated
+          name: Inverter Current
+        - entity: sensor.growatt_inverter_fan_speed
+          secondary_info: last-updated
+          name: Inverter Fan
+        - entity: sensor.growatt_inverter_temperature
+          secondary_info: last-updated
+          name: Inverter Temp
+      title: Geral
+    - type: entities
+      entities:
+        - entity: sensor.growatt_ac_charger_battery_current
+          secondary_info: last-updated
+          name: Battery Current
+        - entity: sensor.growatt_ac_charger_today
+          secondary_info: last-updated
+          name: Charger Today
+        - entity: sensor.growatt_ac_charger_total
+          secondary_info: last-updated
+          name: Charger Total
+        - entity: sensor.growatt_ac_charger_va
+          secondary_info: last-updated
+          name: Charger VA
+        - entity: sensor.growatt_ac_charger_watts
+          secondary_info: last-updated
+          name: Charger Watts
+        - entity: sensor.growatt_ac_discharge_va
+          secondary_info: last-updated
+          name: Discharge VA
+        - entity: sensor.growatt_ac_discharge_watts
+          secondary_info: last-updated
+          name: Discharge Watts
+        - entity: sensor.growatt_ac_input_frequency
+          secondary_info: last-updated
+          name: Input Freq
+        - entity: sensor.growatt_ac_input_voltage
+          secondary_info: last-updated
+          name: Input Volts
+        - entity: sensor.growatt_ac_input_va
+          secondary_info: last-updated
+          name: Input VA
+        - entity: sensor.growatt_ac_input_watts
+          secondary_info: last-updated
+          name: Input Watts
+      title: AC
+      state_color: false
+      show_header_toggle: false
+    - type: entities
+      entities:
+        - entity: sensor.growatt_pv_energy_today
+          secondary_info: last-updated
+          name: PV Today
+        - entity: sensor.growatt_pv_energy_total
+          secondary_info: last-updated
+          name: PV Total
+        - entity: sensor.growatt_pv_power
+          secondary_info: last-updated
+          name: PV Watts
+        - entity: sensor.growatt_pv_voltage
+          secondary_info: last-updated
+          name: PV Voltage
+      title: PV
+    - type: entities
+      entities:
+        - entity: sensor.growatt_battery_discharge_today
+          secondary_info: last-updated
+          name: Batt Today
+        - entity: sensor.growatt_battery_discharge_total
+          secondary_info: last-updated
+          name: Batt Total
+        - entity: sensor.growatt_battery_voltage
+          secondary_info: last-updated
+          name: Batt Volts
+        - entity: sensor.growatt_battery_discharge_va
+          secondary_info: last-updated
+          name: Batt VA
+        - entity: sensor.growatt_battery_watts
+          secondary_info: last-updated
+          name: Batt Watts
+        - entity: sensor.growatt_battery_discharge_watts
+          secondary_info: last-updated
+          name: Batt Discharge Watts
+        - entity: sensor.growatt_battery_soc
+          secondary_info: last-updated
+          name: Batt State Charge
+      title: Battery
+      state_color: false
+    - type: entities
+      entities:
+        - entity: sensor.growatt_ac_output_frequency
+          secondary_info: last-updated
+          name: Output Freq
+        - entity: sensor.growatt_ac_output_voltage
+          secondary_info: last-updated
+          name: Output Voltage
+        - entity: sensor.growatt_output_current
+          secondary_info: last-updated
+          name: Output Current
+        - entity: sensor.growatt_output_va
+          secondary_info: last-updated
+          name: Output VA
+        - entity: sensor.growatt_output_watts
+          secondary_info: last-updated
+          name: Output Watts
+      title: Output
