@@ -6,6 +6,54 @@ This is a Fork of [Octal-ip's project](https://github.com/octal-ip/ESP07_Growatt
 
 I had some issues using this with home assitant, so I decided to diferentiate the fork to make it easier for home assistant users
 
+### How did I implement this firmware on my datalogger
+
+Part 1: Supplies
+
+I already have soldering equipment and some electronics experience, so the soldering part was trivial
+
+I got one `CP2102` from `mercado livre` and worked flawlessly, cost me about ~R$ 25 (BRL) shipped
+
+Part 2: The datalogger
+
+Disassembly and reassembly was very easy, the only part I messed up was that after soldering the female headers it did not fit in the case and I had to sand it
+
+I should have used male headers (maybe the 90 ones), then removed the plastic spacer and trimmed the ends. I got scared of metal parts shorting stuff inside the case and ended up using female headers.
+
+Part 3: Software
+
+I have never used platformio, but when I cloned this repo and opened in VSCode it suggested an extension that solved
+
+1. I edited `include > secrets.h` with my wifi and mqtt data
+2. Plugged the CP2102 (without connecting to the board) to the computer and got a COMx port
+3. Then edited platformio.ini with the com port
+4. Unplugged from the PC
+5. Shorted GPIO0 and GND (I put a 2-pin header in CN2 - see octal's photo) using a protoboard jumper wire
+6. Connected the dongle board in the CP2102 module
+   1. GND-GND
+   2. 3v3-3v3 (some may be written as 3.3v)
+   3. TX-RX
+   4. RX-TX
+7. I got scared of blowing something up, so I first connected the USB and removed immediately - nothing blew up
+8. Connected again the usb and heard the windows usb connection sound - appeared ok
+9. In VSCode appeared an icon in the top right corner with a down arrow containing: Build, Upload, Test, Clean
+10. I first tried building - ok
+11. Then I tried uploading it - ok
+12. Everything worked
+13. I connected in the inverted and it started to send some data
+14. After that I could edit the platformio.ini to use OTA (I got the IP using the router stats page)
+15. Finally I disconnected again, closed the enclosure (was not easy and took around 1h to solve the header fit)
+16. Put back in the inverter and screw back the two fasteners
+
+I got some crazy values from time to time, after I add some delays in the code, all bad values stop occurring
+
+How I got the mqtt values:
+1. In the HA Interface
+2. Go to configuration
+3. Integrations > MQTT
+4. Configure > Re-configure (do not change, only look)
+5. Copy username and password
+
 # Original Octal readme
 ## ESP07_Growatt_SPF_3500-5000_ES_Monitor
 This project provides PlatformIO code for building custom firmware for the WiFi-F module included with the Growatt SPF 3500-5000 ES off-grid inverters. It collects all available metrics through the MODBUS interface and sends them to InfluxDB or MQTT. The inverter's AC output can also be placed in and out of standby mode remotely through MQTT to reduce idle power consumption when the AC output isn't needed. This is a function not available through the inverter's interface and can save quite a lot of energy over time.
