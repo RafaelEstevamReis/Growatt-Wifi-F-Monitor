@@ -96,7 +96,6 @@ mqtt:
       device_class: frequency
       state_class: measurement
       value_template: "{{ value }}"
-
 ## AC - Charger
     - name: "growatt_AC_Charger_Battery_Current"
       state_topic: "home/solar/growatt-spf/AC_Charger_Battery_Current"
@@ -157,7 +156,6 @@ mqtt:
       state_class: measurement
       value_template: "{{ value }}"
 
-
 # Battery
     - name: "growatt_Battery_voltage"
       state_topic: "home/solar/growatt-spf/Battery_Voltage"
@@ -206,7 +204,6 @@ mqtt:
       value_template: "{{ value }}"
 
 # PV
-
     - name: "growatt_PV_Voltage"
       state_topic: "home/solar/growatt-spf/PV_Voltage"
       unit_of_measurement: "V"
