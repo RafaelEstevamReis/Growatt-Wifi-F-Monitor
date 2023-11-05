@@ -5,6 +5,7 @@
 Observed:
 * 2: Using Battery
 * 5: Using Solar
+* 9: PV+AC
 * 11: Using AC
 
 Growatt modbus protocol PDF:
